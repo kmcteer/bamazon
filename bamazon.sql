@@ -1,4 +1,4 @@
-INSERT INTO products(ProductName,DepartmentName,Price,StockQuantity)
+INSERT INTO products(productname,departmentName,price,stockquantity)
 VALUES ("Grand Theft Auto 5", "Video Games", 49.99, 50),
 ("Potatoe Peeler", "Food Accessories", 3.99, 100),
 ("Coffee Mug", "Coffee Accessories", 10, 70),

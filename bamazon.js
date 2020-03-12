@@ -23,12 +23,12 @@ connection.connect(function(err){
 var makeTable = function(){
     connection.query("SELECT * FROM products", function(err,res){
         for(var i=0; i<res.length; i++){
-            console.log(res[i].itemid+" || "+res[i].productname+" || "+ 
-            res[i].departmentname+" || "+res[i].price+" || "+res[i].stockquantity+"\n");
+            console.log(res[i].itemID+" || "+res[i].productname+" || "+ 
+            res[i].departmentName+" || "+res[i].price+" || "+res[i].stockquantity+"\n")
                     // following this, run node bamazon.js again to see if the connection is succesful
                     // the next portion will be used for allowing a user to select one of the options and purchase them from there
         
-        stockquantity+"\n");
+        
         }
         promptCustomer(res);
         
@@ -59,7 +59,7 @@ var promptCustomer = function(res){
                         name:"quant",
                         message:"How many would you like to buy?",
                         validate: function(value){
-                            if(isNan(value)==false){
+                            if(isNaN(value)==false){
                                 return true;
                             } else {
                                 return false;
